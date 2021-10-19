@@ -43,3 +43,12 @@ the name field must match the existing file, if not found, this PUT will be igno
 http://localhost:8080/data-collection/employee/read/employee?fileType=XML/CSV
 
 This endpoint will invoke get endpoint of dataStorage service to fetch the employee data in XML or CSV format, it will deserialize the protobuf before responding.
+
+## Pre-requisite:
+RMQ must be up and running at below mentioned port.
+http://localhost:15672
+
+## Steps to run in local:
+1> git clone git@github.com:RakshithVP/data-collection-service.git - Clone this repo.
+2> mvn clean install - to generate jar files in target repository.
+3> java -jar dataCollectionService-0.0.1-SNAPSHOT.jar - run the spring boot application.
